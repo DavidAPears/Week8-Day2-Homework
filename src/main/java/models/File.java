@@ -78,7 +78,7 @@ public class File {
 //    ONE TO MANY Files to Folder set up:
 
     @ManyToOne
-    @JoinColumn(name = "Folder_id", nullable = false)
+    @JoinColumn(name = "folder", nullable = false)
     public Folder getFolder(){
         return this.folder;
     }

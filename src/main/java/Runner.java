@@ -23,6 +23,7 @@ public class Runner {
 //      FILE(s) Set up:
 
 
+
         File file1 = new File("The Loch Ness Monster", "Java", 340.56, xfile);
         DBHelper.save(file1);
 
@@ -35,7 +36,7 @@ public class Runner {
         File file4 = new File("How To Make Lasagne", "Ruby", 50.00, yfile);
         DBHelper.save(file4);
 
-        File file5 = new File("UFO SImages", "Jpeg", 175.50, xfile);
+        File file5 = new File("UFO Images", "Jpeg", 175.50, xfile);
         DBHelper.save(file5);
 
 
