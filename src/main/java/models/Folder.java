@@ -10,13 +10,12 @@ public class Folder {
     private int id;
     private String name;
     private List<File> files;
+    private Owner owner;
 
 
+    public Folder(String the_x_files, String fox_mulder, Owner owner) { }
 
-
-    public Folder() { }
-
-    public Folder(String name) { this.name = name; }
+    public Folder(String name, Owner owner) { this.name = name; this.owner = owner; }
 
 
 //  SHIP ID Getters & Setters:
@@ -62,6 +61,19 @@ public class Folder {
         this.files = files;
     }
 
+
+//    OWNER Many-to-many:
+
+
+    @ManyToOne
+    @JoinColumn(name = "owner_id", nullable = false)
+    public Owner getOwner(){
+        return this.owner;
+    }
+
+    public void setOwner(Owner owner) {
+        this.owner = owner;
+    }
 
 }
 
